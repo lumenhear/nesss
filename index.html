@@ -1,0 +1,361 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LUMEN Speech and Hearing — Empowering Better Hearing and Communication</title>
+  <meta name="description" content="LUMEN Speech and Hearing Care — Audiology, hearing aids, speech therapy in Hisar, Haryana." />  <style>
+    /* ====== Calm Blue Palette & Base ====== */
+    :root{
+      --calm-50:#F3FAFF;
+      --calm-100:#E6F6FF;
+      --calm-500:#2B9CD8;
+      --ink:#0f172a;
+      --muted:#6b7280;
+      --surface:#ffffff;
+      --accent:#FFD24D; /* yellow logo */
+      --radius:14px;
+      --shadow: 0 6px 20px rgba(15,23,42,0.08);
+      --glass: rgba(255,255,255,0.6);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;background:linear-gradient(180deg,var(--calm-50),#fff);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.45;
+    }
+
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* ====== Header ====== */
+    header{position:sticky;top:12px;z-index:40;background:transparent;padding:8px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
+    .logo svg{width:28px;height:28px}
+    .brand h1{font-size:18px;margin:0}
+    .tag{font-size:12px;color:var(--muted)}
+
+    nav a{margin-left:12px;text-decoration:none;color:var(--ink);font-weight:600}
+    .cta{background:var(--calm-500);color:#fff;padding:10px 14px;border-radius:999px;text-decoration:none}
+
+    /* ====== Hero ====== */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:18px}
+    .eyebrow{display:inline-block;background:var(--calm-100);color:var(--calm-500);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    h2{font-size:36px;margin:12px 0;color:var(--ink)}
+    p.lead{color:var(--muted);margin:0 0 16px}
+
+    .features{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:#fff;padding:10px;border-radius:12px;box-shadow:var(--shadow);display:flex;gap:10px;align-items:center}
+    .pill svg{opacity:.9}
+
+    /* ====== Contact Card ====== */
+    .card{background:linear-gradient(180deg,white, #fbfdff);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+    .card .phone{font-weight:700;font-size:18px}
+    .actions{display:flex;gap:10px;margin-top:14px}
+    .btn{flex:1;padding:12px;border-radius:12px;text-decoration:none;text-align:center;font-weight:700}
+    .btn.primary{background:var(--calm-500);color:#fff}
+    .btn.ghost{border:1px solid #e6f6ff;background:white}
+
+    /* ====== Services grid ====== */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}
+    .service{background:white;padding:14px;border-radius:14px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:flex-start}
+    .service .icon{width:48px;height:48px;border-radius:10px;background:var(--calm-50);display:flex;align-items:center;justify-content:center}
+    .service h4{margin:0 0 6px}
+    .service p{margin:0;color:var(--muted);font-size:13px}
+
+    /* ====== About/Team/Reviews ====== */
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+    .team-card{display:flex;flex-direction:column;gap:10px}
+    .person{display:flex;gap:10px;align-items:center}
+    .avatar{width:56px;height:56px;border-radius:50%;background:#f1f5f9}
+
+    /* ====== Booking Form ====== */
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+    input,select,textarea{padding:10px;border-radius:10px;border:1px solid #e6eef6;background:white}
+    input:focus,select:focus,textarea:focus{outline:2px solid rgba(43,156,216,0.15);border-color:var(--calm-500)}
+    .full{grid-column:1/3}
+
+    /* ====== Footer ====== */
+    footer{margin-top:28px;padding:28px 0;color:var(--muted);font-size:14px}
+
+    /* ====== Responsiveness ====== */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      header{top:0}
+      nav a{display:none}
+      .card{order:-1}
+      form{grid-template-columns:1fr}
+      .split{grid-template-columns:1fr}
+    }
+
+    /* ====== Micro-animations ====== */
+    .service{transition:transform .22s ease, box-shadow .22s ease}
+    .service:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,23,42,0.08)}
+    .btn:active{transform:translateY(1px)}
+
+    /* small helpers */
+    .muted{color:var(--muted);font-size:13px}
+  </style></head>
+<body>
+  <div class="container">
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <!-- simple ear icon -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 3C7 3 4 6 4 11c0 4 3 8 8 8s8-4 8-8c0-5-3-8-8-8z" fill="#0f172a" opacity="0.12"/>
+              <path d="M12 4.5C8.6 4.5 6.5 6.6 6.5 10c0 3 2.1 6 5.5 6s5.5-3 5.5-6c0-3.4-2.1-5.5-5.5-5.5z" fill="#0f172a"/>
+            </svg>
+          </div>
+          <div>
+            <h1>LUMEN Speech and Hearing</h1>
+            <div class="tag">Empowering Better Hearing and Communication</div>
+          </div>
+        </div><nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="cta" href="#book">Book</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Govt‑approved tests • Home visits</span>
+      <h2>Comprehensive audiology & speech‑language services in Hisar</h2>
+      <p class="lead">Certified audiologists & speech‑language pathologists using the latest digital hearing aids (rechargeable & invisible). EMI options & home visits available.</p>
+
+      <div class="features">
+        <div class="pill">
+          <!-- check -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="#2B9CD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <div style="font-weight:700">Government-approved</div>
+            <div class="muted">Standard protocols & certified equipment</div>
+          </div>
+        </div>
+
+        <div class="pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18" stroke="#2B9CD8" stroke-width="2" stroke-linecap="round"/></svg>
+          <div>
+            <div style="font-weight:700">Home Visits</div>
+            <div class="muted">Available on request</div>
+          </div>
+        </div>
+
+        <div class="pill">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2v6l4 2" stroke="#2B9CD8" stroke-width="2" stroke-linecap="round"/></svg>
+          <div>
+            <div style="font-weight:700">Mon–Sat 10 AM–6 PM</div>
+            <div class="muted">Walk-ins & appointments</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid" style="margin-top:22px">
+        <!-- Services preview -->
+        <div class="service"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 8v8M8 12h8" stroke="#0f172a" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h4>Pure Tone Audiometry (PTA)</h4><p>Standard hearing test for all ages.</p></div></div>
+        <div class="service"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#E6F6FF"/></svg></div><div><h4>Impedance Audiometry</h4><p>Middle ear evaluation & reflex testing.</p></div></div>
+        <div class="service"><div class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3C7 3 4 6 4 11c0 4 3 8 8 8s8-4 8-8c0-5-3-8-8-8z" fill="#E6F6FF"/></svg></div><div><h4>OAE & BERA/ABR</h4><p>Objective cochlear & neural tests.</p></div></div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div class="muted">Contact</div>
+            <div class="phone">+91 93501 58754</div>
+            <div class="muted">lumenhearingcare@gmail.com</div>
+          </div>
+          <div style="text-align:right">
+            <div class="muted">Location</div>
+            <div style="font-weight:700">Hisar, Haryana</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="#book">Book Appointment</a>
+          <a class="btn ghost" target="_blank" rel="noreferrer" href="https://wa.me/919350158754">WhatsApp</a>
+        </div>
+
+        <div class="muted" style="margin-top:12px">EMI options available • Latest rechargeable & invisible hearing aids</div>
+      </div>
+    </aside>
+  </section>
+
+  <section id="services">
+    <h3 style="margin-top:28px">Our Services</h3>
+    <p class="muted">Comprehensive audiology & speech therapy offerings for children and adults.</p>
+
+    <div class="grid">
+      <div class="service"><div class="icon">🎧</div><div><h4>Pure Tone Audiometry (PTA)</h4><p>Behavioural hearing threshold assessment.</p></div></div>
+      <div class="service"><div class="icon">🔊</div><div><h4>Impedance Audiometry</h4><p>Tympanometry & reflexes.</p></div></div>
+      <div class="service"><div class="icon">🧾</div><div><h4>OAE (Otoacoustic Emissions)</h4><p>Newborn & cochlear outer hair cell screening.</p></div></div>
+      <div class="service"><div class="icon">🧠</div><div><h4>BERA / ABR</h4><p>Brainstem auditory evoked responses.</p></div></div>
+      <div class="service"><div class="icon">🔔</div><div><h4>BC ABR</h4><p>Bone-conducted ABR for infants & special cases.</p></div></div>
+      <div class="service"><div class="icon">🎚️</div><div><h4>Hearing Aid Fitting & Trial</h4><p>Hands-on trial of rechargeable & invisible models.</p></div></div>
+      <div class="service"><div class="icon">🛠️</div><div><h4>Hearing Aid Servicing</h4><p>Repairs, maintenance & cleaning.</p></div></div>
+      <div class="service"><div class="icon">🗣️</div><div><h4>Speech Therapy (Children & Adults)</h4><p>Language, articulation & fluency support.</p></div></div>
+      <div class="service"><div class="icon">📘</div><div><h4>Language Delay Therapy</h4><p>Early intervention & parent coaching.</p></div></div>
+      <div class="service"><div class="icon">🎤</div><div><h4>Voice Therapy</h4><p>Professional voice rehabilitation.</p></div></div>
+    </div>
+  </section>
+
+  <section id="about" style="margin-top:20px">
+    <div class="split">
+      <div>
+        <h3>Why Choose LUMEN?</h3>
+        <ul style="margin-top:12px;color:var(--muted);line-height:1.6">
+          <li>Government-approved tests and standard protocols.</li>
+          <li>Certified Audiologists & Speech-Language Pathologists.</li>
+          <li>Home visits and family-focused AVT approaches.</li>
+          <li>EMI options & latest digital hearing aids.</li>
+        </ul>
+      </div>
+
+      <div class="team-card card">
+        <h4>Meet our team</h4>
+        <div class="person"><div class="avatar"></div><div><strong>Rajat</strong><div class="muted">Audiologist — M.Aud, Hearing Aid Fitter</div></div></div>
+        <div class="person"><div class="avatar"></div><div><strong>Deepak</strong><div class="muted">Speech-Language Pathologist — M.Sc SLP</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px">
+    <h3>What our patients say</h3>
+    <div class="grid" style="margin-top:12px">
+      <div class="card"><strong>Excellent care</strong><p class="muted" style="margin-top:8px">"The team at LUMEN explained everything carefully. My child's language has improved so much."</p><div class="muted" style="margin-top:8px">— Parent, Hisar</div></div>
+      <div class="card"><strong>Quick & professional</strong><p class="muted" style="margin-top:8px">"Got a hearing aid trial and servicing done. Very helpful with EMI options."</p><div class="muted" style="margin-top:8px">— Senior patient</div></div>
+    </div>
+  </section>
+
+  <section id="book" style="margin-top:24px">
+    <h3>Book an Appointment</h3>
+    <p class="muted">Fill the form and we'll confirm via call or WhatsApp.</p>
+
+    <form id="bookingForm" novalidate>
+      <div>
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+      </div>
+
+      <div>
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" placeholder="10 digit mobile" pattern="[0-9]{10}" required />
+      </div>
+
+      <div>
+        <label for="service">Preferred Service</label>
+        <select id="service" name="service">
+          <option>Pure Tone Audiometry (PTA)</option>
+          <option>Impedance Audiometry</option>
+          <option>OAE (Otoacoustic Emissions)</option>
+          <option>BERA / ABR</option>
+          <option>BC ABR</option>
+          <option>Hearing Aid Fitting & Trial</option>
+          <option>Hearing Aid Servicing</option>
+          <option>Speech Therapy for Children & Adults</option>
+          <option>Language Delay Therapy</option>
+          <option>Voice Therapy</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="datetime">Preferred Date & Time</label>
+        <input id="datetime" name="datetime" type="datetime-local" required />
+      </div>
+
+      <div class="full">
+        <label for="location">Clinic Location</label>
+        <select id="location" name="location"><option>Hisar, Haryana</option></select>
+      </div>
+
+      <div class="full">
+        <button type="submit" class="btn primary">Request Appointment</button>
+      </div>
+
+      <div id="msg" class="full muted" style="display:none"></div>
+    </form>
+  </section>
+
+  <section id="contact" style="margin-top:18px">
+    <div class="split">
+      <div class="card">
+        <h4>Contact & Location</h4>
+        <div style="margin-top:8px;color:var(--muted)">
+          <div><strong>Phone:</strong> <a href="tel:+919350158754">+91 93501 58754</a></div>
+          <div style="margin-top:6px"><strong>Email:</strong> <a href="mailto:lumenhearingcare@gmail.com">lumenhearingcare@gmail.com</a></div>
+          <div style="margin-top:6px"><strong>Address:</strong> Hisar, Haryana</div>
+          <div style="margin-top:6px"><strong>Hours:</strong> Mon–Sat | 10:00 AM to 6:00 PM</div>
+        </div>
+        <div style="margin-top:10px"><a class="btn" href="https://instagram.com/lumenhearingcare" target="_blank">Instagram @lumenhearingcare</a></div>
+      </div>
+
+      <div class="card">
+        <h4>Certifications & Features</h4>
+        <ul style="margin-top:10px;color:var(--muted);line-height:1.6">
+          <li>Government-approved audiometry testing</li>
+          <li>EMI options for hearing aids</li>
+          <li>Home visits on request</li>
+          <li>Certified clinicians & evidence-based therapy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div><strong>LUMEN Speech and Hearing</strong><div class="muted">© 2025 LUMEN Speech and Hearing</div></div>
+    <div class="muted">Call <a href="tel:+919350158754">+91 93501 58754</a> • lumenhearingcare@gmail.com</div>
+  </div>
+</footer>
+
+  </div>  <script>
+    // Basic client-side booking form handling (placeholder for backend integration)
+    (function(){
+      const form = document.getElementById('bookingForm');
+      const msg = document.getElementById('msg');
+
+      function showMessage(text, ok){
+        msg.style.display = 'block';
+        msg.textContent = text;
+        msg.style.color = ok ? 'green' : '#c4302b';
+        setTimeout(()=>{ msg.style.display = 'none'; }, 6000);
+      }
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        const data = new FormData(form);
+        const name = data.get('name').trim();
+        const phone = data.get('phone').trim();
+        const datetime = data.get('datetime').trim();
+
+        // simple validation
+        if(!name){ return showMessage('Please enter your name', false); }
+        if(!/^\d{10}$/.test(phone)){ return showMessage('Enter 10 digit phone number', false); }
+        if(!datetime){ return showMessage('Choose preferred date & time', false); }
+
+        // Simulate sending: In production, POST to your server or integrate with WhatsApp API
+        const payload = Object.fromEntries(data.entries());
+        console.log('Booking payload', payload);
+
+        // quick WhatsApp fallback (opens WhatsApp with prefilled message)
+        const waMessage = encodeURIComponent(`Hi LUMEN, I would like to book ${payload.service} on ${payload.datetime}. Name: ${payload.name}, Phone: ${payload.phone}`);
+        // Uncomment next line if you want to redirect users to WhatsApp automatically
+        // window.open('https://wa.me/919350158754?text=' + waMessage, '_blank');
+
+        showMessage('Thanks! Your request has been received. We will contact you soon.', true);
+        form.reset();
+      });
+    })();
+  </script></body>
+</html>
